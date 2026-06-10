@@ -8,6 +8,7 @@
 <title>Backrooms The Level</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,106 +16,85 @@
 }
 
 body{
-    background:#000;
-    color:#d6d6d6;
-    font-family:Courier New, monospace;
-    overflow-x:hidden;
+    background:url("Fondo.png") center center/cover no-repeat fixed;
+    font-family:Consolas, monospace;
+    color:white;
+    min-height:100vh;
 }
 
-/* Efecto VHS */
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
+.overlay{
     width:100%;
-    height:100%;
-    background:
-    repeating-linear-gradient(
-        transparent 0px,
-        rgba(255,255,255,0.04) 2px,
-        transparent 4px
-    );
-    pointer-events:none;
-    z-index:999;
-}
+    min-height:100vh;
 
-.header{
+    background:rgba(0,0,0,0.65);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:80px 20px;
-    background:#111;
-    border-bottom:2px solid #ffd800;
 }
 
-.header h1{
+.container{
+    max-width:700px;
+    padding:40px;
+}
+
+h1{
     font-size:4rem;
-    color:#ffd800;
-    text-shadow:0 0 15px #ffd800;
-}
-
-.header p{
-    margin-top:15px;
-    color:#aaa;
-}
-
-.section{
-    max-width:1100px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.section h2{
-    color:#ffd800;
     margin-bottom:20px;
+    text-shadow:0 0 20px #000;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+p{
+    font-size:1.1rem;
+    margin-bottom:30px;
 }
 
-.gallery img{
-    width:100%;
-    border:2px solid #444;
+.version{
+    margin-bottom:20px;
+    color:#cccccc;
+}
+
+.download-btn{
+    display:inline-block;
+
+    padding:18px 40px;
+
+    background:#ffe600;
+    color:black;
+
+    text-decoration:none;
+    font-weight:bold;
+
+    border-radius:6px;
+
     transition:0.3s;
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
+.download-btn:hover{
+    transform:scale(1.05);
 }
 
-.download{
-    text-align:center;
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#ffd800;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:5px;
+.status{
+    margin-top:25px;
+    color:#8cff8c;
 }
 
 .footer{
-    text-align:center;
-    padding:30px;
-    background:#111;
-    border-top:2px solid #333;
-    color:#777;
+    margin-top:40px;
+    font-size:0.9rem;
+    color:#bdbdbd;
 }
 
 .vhs{
     position:fixed;
     top:10px;
     left:10px;
+
     color:red;
     font-size:14px;
-    z-index:1000;
 }
+
 </style>
 
 </head>
@@ -122,59 +102,41 @@ body::before{
 <body>
 
 <div class="vhs">
-REC ● VHS PLAY
+REC ● VHS
 </div>
 
-<header class="header">
+<div class="overlay">
+
+<div class="container">
+
 <h1>BACKROOMS THE LEVEL</h1>
-<p>Explora lo desconocido. Sobrevive al infinito.</p>
-</header>
-
-<section class="section">
-<h2>Acerca del Juego</h2>
 
 <p>
-Backrooms The Level es un videojuego de exploración y supervivencia
-en primera persona inspirado en el universo de las Backrooms.
-Descubre niveles misteriosos, encuentra secretos ocultos
-y avanza a través de un mundo infinito lleno de tensión y peligro.
+Explora niveles misteriosos, descubre secretos ocultos
+y adéntrate en un mundo infinito inspirado en las Backrooms.
 </p>
-</section>
 
-<section class="section">
-<h2>Capturas de Pantalla</h2>
-
-<div class="gallery">
-
-<img src="images/screenshot1.jpg" alt="Imagen 1">
-
-<img src="images/screenshot2.jpg" alt="Imagen 2">
-
-<img src="images/screenshot3.jpg" alt="Imagen 3">
-
-</div>
-</section>
-
-<section class="section">
-
-<h2>Descarga</h2>
-
-<div class="download">
-<a class="btn" href="#">
-DESCARGAR PRÓXIMAMENTE
-</a>
+<div class="version">
+Versión: Alpha 0.1
 </div>
 
-</section>
+<a class="download-btn"
+href="downloads/Backrooms-The-Level.zip">
+DESCARGAR </a>
 
-<footer class="footer">
-<p>
+<div class="status">
+✔ Desarrollo activo
+</div>
+
+<div class="footer">
 © 2026 Backrooms The Level
-</p>
-<p>
-Proyecto Open Source bajo GPL-3.0
-</p>
-</footer>
+<br>
+Código abierto bajo GPL-3.0
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
